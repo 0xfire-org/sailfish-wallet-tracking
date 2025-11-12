@@ -1,0 +1,26 @@
+{
+  "name": "wallet-map",
+  "version": "1.0.0",
+  "description": "Wallet-Token Visualizer",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --format=esm --outfile=dist/main.js --sourcemap",
+    "watch": "esbuild src/main.ts --bundle --format=esm --outfile=dist/main.js --sourcemap --watch",
+    "serve": "serve . -l 3000",
+    "dev": "concurrently -n \"BUILD,SERVE\" -c \"blue,green\" \"npm run watch\" \"npm run serve\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.27.0",
+    "serve": "^14.2.5",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "plotly.js-dist": "^3.2.0",
+    "sailfish-sdk": "github:0xfire-org/sailfish-sdk"
+  }
+}
